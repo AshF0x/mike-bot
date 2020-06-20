@@ -2,9 +2,17 @@ import discord
 import os
 import random
 import time
+import logging
+
+# Debug Loger
+logger = logging.getLogger(discord)
+logger.setLevel(logging.DEBUG)
+handler = logging.FileHandler(filename='mike.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asciitime)s:%(levelname)s:%(name)s: %(message)s'))
+logger.addHandler(handler)
 
 # Loading Token, Set your personal Token as env variable "DISCORD_API_TOKEN"
-TOKEN = os.getenv("DISCORD_API_TOKEN")
+TOKEN = os.getenv('DISCORD_API_TOKEN')
 client = discord.Client()
 
 file = open('facts.txt','r')
