@@ -15,6 +15,7 @@ class thm(commands.Cog):
         rank = all_stats['userRank']
         beddy = discord.Embed(type='rich', title='Current rank of "'+ user +'" on THM', color=0xD68910)
         beddy.add_field(name='Rank', value=rank, inline=False)
+        beddy.set_image(url='https://tryhackme-badges.s3.amazonaws.com/'+user+'.png')
         await ctx.send(embed=beddy)
 
 def setup(bot):
