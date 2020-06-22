@@ -13,10 +13,12 @@ handler = logging.FileHandler(filename='mike.log', encoding='utf-8', mode='w')
 handler.setFormatter(logging.Formatter('%(asciitime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-bot = commands.Bot(command_prefix='!')
+prefixes = ('$', '(╯°□°）╯︵ ┻━┻', '┬─┬ ノ( ゜-゜ノ)', '¯\_(ツ)_/¯')
+bot = commands.Bot(command_prefix=prefixes)
 initial_extensions = [
     'cogs.facts', 
-    'cogs.thm'
+    'cogs.thm',
+    'cogs.users'
 ]
 
 if __name__ == '__main__':
