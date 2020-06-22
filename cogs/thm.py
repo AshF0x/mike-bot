@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from thmapi import THM
 import requests
 import json
 
